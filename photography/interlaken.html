@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Davie - Photography</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>William Davie</h1>
+        <img src="/home/3bodybanner.png" alt="banner">
+        <nav>
+            <a href="/index.html">About</a>
+            <a href="#">Research</a>
+            <a href="#">Projects</a>
+            <a href="/photography/photography.html">Photography</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="slideshow-container">
+           
+            <div class="slide active">
+                <img src="Interlaken/Int1.jpg" alt="Interlaken">
+            </div>
+            <div class="slide active">
+                <img src="Interlaken/Int2.jpg" alt="Interlaken">
+            </div>
+            <div class="slide active">
+                <img src="Interlaken/Int3.jpg" alt="Interlaken">
+            </div>
+            <div class="slide active">
+                <img src="Interlaken/Int4.jpg" alt="Interlaken">
+            </div>
+            <div class="slide active">
+                <img src="Interlaken/Int5.jpg" alt="Interlaken">
+            </div>
+            <div class="slide active">
+                <img src="Interlaken/Int6.jpg" alt="Interlaken">
+            </div>
+            <div class="slide active">
+                <img src="Interlaken/Int7.jpg" alt="Interlaken">
+            </div>
+            <div class="slide active">
+                <img src="Interlaken/Int8.jpg" alt="Interlaken">
+            </div>
+            <div class="slide active">
+                <img src="Interlaken/Int9.jpg" alt="Interlaken">
+            </div>
+            </div>
+            <!-- Add more slides as needed -->
+            <button class="prev" onclick="changeSlide(-2.0)">&#10094;</button>
+            <button class="next" onclick="changeSlide(2.0)">&#10095;</button>
+        </div>
+        <h4>As part of a solo trip through switzerland, I visited the town of Interlaken.  Glaciear particles cause Lake Brienz to turn a vivid turquiose. These photos were taken on a walk through interlaken and during a hike in the nearby village of Grindelwald.</h4>
+    </main>
+
+    <script>
+        let slideIndex = 0; // Initialize slide index
+        showSlides(); // Display the first slide
+
+        function showSlides() {
+            const slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active"); // Hide all slides
+            }
+        slides[slideIndex].classList.add("active"); // Show current slide
+    }
+
+        function changeSlide(n) {
+            slideIndex += n; // Change the slide index
+            const slides = document.getElementsByClassName("slide");
+            if (slideIndex > slides.length) {
+                slideIndex = 1; // Reset to first slide if exceeds
+            }
+            if (slideIndex < 1) {
+                slideIndex = slides.length; // Go to last slide if below 1
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active"); // Hide all slides
+            }
+            slides[slideIndex - 1].classList.add("active"); // Show current slide
+
+
+        }
+
+        setInterval(function () {
+            changeSlide(1); // Move to the next slide automatically
+        }, 5000); // Change slide every 5000 milliseconds (5 seconds)
+    </script>
+
+</body>
+</html>
