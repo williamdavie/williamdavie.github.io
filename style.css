@@ -145,3 +145,153 @@ h2 {
     }
 }
 
+
+
+
+
+.photo-collections h3 {
+    text-align: center; /* Centers text horizontally */
+     /* Optional: Adjust font size */
+     padding: 40px 40px;
+}
+.photo-collections h2 {
+    text-align: center; /* Centers text horizontally */
+     /* Optional: Adjust font size */
+     padding: 0px 0px;
+}
+
+.photo-collections a:hover {
+    color: #E74C3C;
+}
+
+a {
+    margin-right: 10px;
+    font-size: 12.5px;
+    text-decoration: none;
+    color: #2C3E50;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Spacing between grid items */
+    margin-top: 40px;
+    padding: 0 20px; /* Optional padding for the gallery */
+}
+
+/* Gallery Item */
+.gallery-item {
+    text-align: center;
+}
+
+
+/* Gallery Image */
+.gallery-image {
+    width: 100%; /* Makes image fill the grid cell */
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 5px; /* Optional rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+}
+
+/* Collection Title */
+.gallery-item h4 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+    font-family: 'Arial', sans-serif; /* Optional font */
+}
+
+
+        /* Slideshow CSS */
+.slideshow-container {
+    max-width: 40%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex; /* Enable flexbox layout */
+    justify-content: space-between; /* Distribute slides evenly */
+    align-items: center; /* Vertically center slides */
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-in-out; /* Smooth fade */
+}
+
+/* Active slide becomes visible */
+.slide.active {
+    opacity: 1;
+}
+
+.slideshow-container img {
+    position: absolute; /* Position the container absolutely */
+    top: 55%; /* Position it at the vertical center */
+    left: 50%; /* Position it at the horizontal center */
+    transform: translate(-50%, -50%);
+    max-width: 50%;
+    max-height: 75%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: contain; /* Contain the image within the box, maintaining aspect ratio */
+    display: block;
+    margin: auto;
+    background-color: #f2f2f2; /* Fill blank space with a background color */
+    border-color: #f2f2f2;
+}
+
+h4 {
+    position: absolute; /* Position the container absolutely */
+    top: 100%; /* Position it at the vertical center */
+    left: 50%; /* Position it at the horizontal center */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    align-items: center;
+    font-size: 12px;
+    font-family: Avenir, sans-serif;;
+    color: #2C3E50;
+    font-weight: 400;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
+
+
+}
+
+
+        /* Navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    user-select: none; /* Prevent text selection */
+}
+
+.next {
+    right: 5%; /* Position next button to the right */
+}
+
+.prev {
+    left: 5%;
+}
+
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darken on hover */
+}
+
+.space a{
+    padding: 50%
+}
+
